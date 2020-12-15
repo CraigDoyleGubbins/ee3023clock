@@ -31,11 +31,12 @@
     ?>
     
     <div class="report-container">
-        <h2><?php echo $data->name; ?> Weather Status</h2>
         <div class="time">
-            <div><?php echo date("l g:i a", $currentTime); ?></div>
-            <div><?php echo date("jS F, Y",$currentTime); ?></div>
+            <div><?php echo date("g:i a", $currentTime); ?></div>
+            <div><?php echo date("l, jS F, Y",$currentTime); ?></div>
+            <div><?php echo $data->name; ?> City ?></div>
             <div><?php echo ucwords($data->weather[0]->description); ?></div>
+          
         </div>
         <!--<div class="weather-forecast">-->
         <div>
