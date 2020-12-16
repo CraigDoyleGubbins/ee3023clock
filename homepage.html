@@ -2,13 +2,7 @@
 <html>
   <head> </head>
 
-  <body>
-    <!--
-    <?php
-    print_r(get_headers("http://www.google.com"));
-    ?>
-    -->
-    
+  <body>    
     <?php
 
     $apiKey = "b7875bed8e953c3f47efb21150da9b82";
@@ -30,31 +24,14 @@
     $currentTime = time();
     ?>
     
-    <div class="report-container">
-        <div class="time">
-            <div><?php echo date("g:i a", $currentTime); ?></div>
-            <div><?php echo date("l, jS F, Y",$currentTime); ?></div>
-            <div><?php echo $data->name; ?> City</div>
-            <div><?php echo ucwords($data->weather[0]->description); ?></div>
-          
-        </div>
-        <!--<div class="weather-forecast">-->
-        <div>
-            <!--<img
-                src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png"
-                class="weather-icon" /> <?php echo $data->main->temp_max; ?>°C<span
-                class="min-temperature"><?php echo $data->main->temp_min; ?>°C</span>
-                -->
-                <!--<img src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png" />-->
-                     <div><?php echo $data->main->temp_max; ?>°C</div>
-                     <div><?php echo $data->main->temp_min; ?>°C</div>
-        </div>
-        
-         <div>
-            <div>Humidity: <?php echo $data->main->humidity; ?> %</div>
-            <div>Wind: <?php echo $data->wind->speed; ?> km/h</div>
-        </div>
-    </div>
+    <div><?php echo date("g:i a", $currentTime); ?></div>
+    <div><?php echo date("l, jS F, Y",$currentTime); ?></div>
+    <div><?php echo $data->name; ?> City</div>
+    <div><?php echo ucwords($data->weather[0]->description); ?></div>
+    <div><?php echo $data->main->temp_max; ?>°C</div>
+    <div><?php echo $data->main->temp_min; ?>°C</div>
+    <div>Humidity: <?php echo $data->main->humidity; ?> %</div>
+    <div>Wind: <?php echo $data->wind->speed; ?> km/h</div>
     
   </body>
 </html>
